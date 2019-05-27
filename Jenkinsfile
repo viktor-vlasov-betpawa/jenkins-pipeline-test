@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     load 'echo.groovy'
-                    echo "${rootDir}"
+                    echo env.WORKSPACE
                 }
             }
             post {
