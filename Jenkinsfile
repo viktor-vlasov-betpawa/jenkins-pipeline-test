@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage ('Stage 1'){
+        stage ('Echo script'){
             steps {
-                echo "Stage 1 execution"
+                script {
+                    load 'echo.groovy'
+                }
             }
         }
     }
