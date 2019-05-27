@@ -7,6 +7,13 @@ pipeline {
                     load 'echo.groovy'
                 }
             }
+            post {
+                always {
+                    script {
+                        echo 'stage execution finished'
+                    }
+                }
+            }
         }
     }
     post {
